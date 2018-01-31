@@ -237,7 +237,7 @@ void print_rss(msg_t *msg)
         */
 
         
-        int rss_value = hdr->rssi - CC2538_RSSI_OFFSET; 
+        unsigned long int rss_value = hdr->rssi - CC2538_RSSI_OFFSET; 
         printf("%lu\n",rss_value); 
         /* 
 
