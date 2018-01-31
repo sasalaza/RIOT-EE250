@@ -238,7 +238,7 @@ void print_rss(msg_t *msg)
 
         
         int rss_value = hdr->rssi - CC2538_RSSI_OFFSET; 
-        printf("%d\n",rss_value); 
+        printf("%lu\n",rss_value); 
         /* 
 
         /* Tell GNRC you are done with this packet so it can release the memory */
@@ -256,7 +256,7 @@ void print_prr(uint32_t pkt_rcv, uint32_t num_pkts)
      * and print it out 
      */
 
-    float PSS = (float) pkt_rccv / num_pkts; 
+    float PSS = (float) pkt_rcv / num_pkts; 
     printf("%f\n",PSS); 
     
 
