@@ -236,6 +236,11 @@ void print_rss(msg_t *msg)
          * changes to help you finish the lab faster 
         */
 
+        
+        int rss_value = hdr->rssi - CC2538_RSSI_OFFSET; 
+        printf(rss_value); 
+        /* 
+
         /* Tell GNRC you are done with this packet so it can release the memory */
         gnrc_pktbuf_release(pkt);
     }
@@ -250,6 +255,9 @@ void print_prr(uint32_t pkt_rcv, uint32_t num_pkts)
      * of packets you actually received. Calculate the Packet Reception Ratio 
      * and print it out 
      */
+
+    float PSS = pkt_rccv / num_pkts; 
+    printf(PSS); 
     
 
 }
