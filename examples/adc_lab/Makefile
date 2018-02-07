@@ -10,7 +10,7 @@ PROGRAMMER ?= cc2538-bsl
 # This has to be the absolute path to the RIOT base directory:
 RIOTBASE ?= $(CURDIR)/../..
 
-FEATURES_REQUIRED = periph_adc periph_gpio
+FEATURES_REQUIRED = periph_adc 
 USEMODULE += xtimer
 
 # Comment this out to disable code in RIOT that does safety checking
